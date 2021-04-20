@@ -44,7 +44,6 @@ def solve(G, s, f):
                 happiness = nx.get_edge_attributes(G,'happiness')
                 stress_to_add = att_list_copy[0][1]
                 happiness_to_add = att_list_copy[0][0]
-                #print(current_room)
                 for m in range(len(current_room[0])): #compute the stress of the newly added vertice to the room with every other vertice in the room
                     if (current_room[0][m] != att_list_copy[0][3] and att_list_copy[0][2] not in current_room[0]):
                         
@@ -53,8 +52,7 @@ def solve(G, s, f):
                             stress_to_add  += stress[(current_room[0][m], att_list_copy[0][2])]
                             happiness_to_add += happiness[(current_room[0][m], att_list_copy[0][2])]
 
-                        if (current_room[0][m] > att_list_copy[0][2]):
-                            #print(stress[(att_list_copy[0][2], current_room[0][m])])
+                        if (current_room[0][m] > att_list_copy[0][2]):                            
                             stress_to_add  += stress[(att_list_copy[0][2], current_room[0][m])]
                             happiness_to_add += happiness[(att_list_copy[0][2], current_room[0][m])]
 
@@ -65,12 +63,10 @@ def solve(G, s, f):
                             stress_to_add  += stress[(current_room[0][m], att_list_copy[0][3])]
                             happiness_to_add += happiness[(current_room[0][m], att_list_copy[0][3])]
 
-                        if (current_room[0][m] > att_list_copy[0][3]):
-                            #print(stress[(att_list_copy[0][3], current_room[0][m])])
+                        if (current_room[0][m] > att_list_copy[0][3]):                         
                             stress_to_add  += stress[(att_list_copy[0][3], current_room[0][m])]
                             happiness_to_add += happiness[(att_list_copy[0][3], current_room[0][m])]
-
-                #print("TOTAL", stress_to_add)
+             
                 if (stress_to_add + current_room[2] > s/k): #if stress of new edge exceeds current room stress
                     counter += 1
                     for z in range(len(current_room[0])):#  remove all instances of this vertice from the rest of the list
@@ -165,10 +161,6 @@ def solve(G, s, f):
             i = 0
             counter = 0
 
-    # print(room_list)
-    # print(len(room_list))
-    # print("s/k:", s / len(room_list))
-
     c = 0
     r = {}
     while (c < num_vertices):
@@ -187,7 +179,6 @@ def helper(list):
 def helper2(list):
     return list[1]/(list[2] + 1)
 
-# Here's an example of how to run your solver.
 
 # Usage: python3 solver.py test.in
 
