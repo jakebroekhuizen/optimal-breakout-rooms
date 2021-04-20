@@ -32,10 +32,7 @@ def solve(G, s, f):
     #print(att_list_copy)
 
     while (i < num_vertices):
-        # print("second k:", k)
-        # print("second counter:", counter)
         while (k > counter):
-            # print("here")
             room_list.append([[], 0, 0]) #index 0 = list of vertices, index 1 = total room happiness, index 2 = total room stress
             while (room_list[counter][2] < s/k and i < num_vertices and len(att_list_copy) > 0):
 
