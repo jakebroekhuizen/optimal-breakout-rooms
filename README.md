@@ -1,22 +1,5 @@
-# CS 170 Project Fall 2020
 
-Take a look at the project spec before you get started!
+In the era of remote learning and a world where teaching and instruction occurs in 'breakout' rather than 'class' - rooms, assigning breakout rooms from a teachers perspective can be challenging. As part of a CS170 UC Berkeley CompSci assignment, my partner and I were tasked with creating an algorithm that assigned N students to breakout rooms in an optimal manner, where "optimal" in this context refers to maximizing the total happiness and minimizing the total stress across breakout room assignments.
 
-Requirements:
-
-Python 3.6+
-
-You'll only need to install networkx to work with the starter code. For installation instructions, follow: https://networkx.github.io/documentation/stable/install.html
-
-If using pip to download, run `python3 -m pip install networkx`
-
-
-Files:
-- `parse.py`: functions to read/write inputs and outputs
-- `solver.py`: where you should be writing your code to solve inputs
-- `utils.py`: contains functions to compute cost and validate NetworkX graphs
-
-When writing inputs/outputs:
-- Make sure you use the functions `write_input_file` and `write_output_file` provided
-- Run the functions `read_input_file` and `read_output_file` to validate your files before submitting!
-  - These are the functions run by the autograder to validate submissions
+-Each student feels a fixed level of happiness (numerically defined between 0-100) towards being in a room with another student
+-Each student feels a fixed level of stress (numerically defined between 0-100) towards being in a room with another student
