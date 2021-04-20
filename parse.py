@@ -142,11 +142,8 @@ def ten_in_builder(G):
     return G
 
 def main():
-    #network = nx.Graph()
-    #write_input_file(ten_in_builder(network), 8, "10.in")
     dict = {1:2, 2:3, 3:4}
     write_output_file(dict, "testout.out")
     
-
 if __name__ == "__main__":
     main()
